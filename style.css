@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%);
+    --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+
+body {
+    display: grid;
+    width: auto;
+    width: auto;
+    justify-items: center;
+    align-items: center;
+    background-image: url(/images/bg-intro-mobile.png);
+    background-color: var(--Red);
+    padding-top: 100px;
+    padding-bottom: 100px ;
+}
+
+.main-container{
+    display: grid;
+    width: 80%;
+    height: max-content;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: transparent;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    gap: 70px;
+    
+}
+
+.left-side{
+    display: grid;
+    width: auto;
+    height: min-content;
+    grid-template-columns: auto;
+    grid-template-rows: max-content max-content;
+    gap: 25px;
+}
+
+.left-side>h1{
+    font-family: Poppins;
+    font-weight: 700;
+    color: white;
+    word-break: break-all;
+    height: 100px;
+}
+
+.left-side>p{
+    font-family: Poppins;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    
+}
+
+.right-side{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    background-color: transparent;
+    gap: 50px;
+}
+
+
+.try-it-free{
+    display: grid;
+    width: 100%;
+    height: 100px;
+    background-color: var(--Blue);
+    justify-items: center;
+    align-items: center;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 9px 0px rgba(0, 0, 0, 0.13);
+}
+
+.try-it-free>p{
+    width: 200px;
+}
+
+.try-it-free>p>span{
+    font-family: Poppins;
+    font-weight: 300;
+    color: white;
+}
+
+.form{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 25px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 9px 0px rgba(0, 0, 0, 0.13);
+}
+
+.firstname{
+    height: 50px;
+    border: 1px solid var(--borderColorFirstname,rgba(0, 0, 0, 0.247));
+    border-radius: 5px;
+    outline-color: var(--outlineError,black);
+    user-select: none;
+    padding-left: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+.one{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.one::before{
+    content: 'First Name cannot be empty';
+    display: var(--errorFirstname, none);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: end;
+    top: 52px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 11px;
+    color: hsl(0, 100%, 74%);
+}
+
+.one::after{
+    content: '';
+    display: var(--errorFirstname, none);
+    background-image: url(/images/icon-error.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    justify-self: end;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+
+.firstname::placeholder{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.356);
+}
+
+
+.lastname{
+    height: 50px;
+    border: 1px solid var(--borderColorLastname,rgba(0, 0, 0, 0.247));
+    border-radius: 5px;
+    outline-color: var(--outlineError,black);
+    user-select: none;
+    padding-left: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.two{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.two::before{
+    content: 'First Name cannot be empty';
+    display: var(--errorLastname, none);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: end;
+    top: 52px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 11px;
+    color: hsl(0, 100%, 74%);
+}
+
+.two::after{
+    content: '';
+    display: var(--errorLastname, none);
+    background-image: url(/images/icon-error.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    justify-self: end;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+.lastname::placeholder{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.356);
+}
+
+.email{
+    height: 50px;
+    border: 1px solid var(--borderColorEmail,rgba(0, 0, 0, 0.247));
+    border-radius: 5px;
+    outline-color: var(--outlineError,black);
+    user-select: none;
+    padding-left: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.three{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.three::before{
+    content: 'Looks like this is not an email';
+    display: var(--errorEmail, none);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: end;
+    top: 52px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 11px;
+    color: hsl(0, 100%, 74%);
+}
+
+.three::after{
+    content: '';
+    display: var(--errorEmail, none);
+    background-image: url(/images/icon-error.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    justify-self: end;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+.email::placeholder{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--emailPlaceholder, rgba(0, 0, 0, 0.356));
+}
+
+.password{
+    height: 50px;
+    border: 1px solid var(--borderColorPassword,rgba(0, 0, 0, 0.247));
+    border-radius: 5px;
+    outline-color: var(--outlineError,black);
+    user-select: none;
+    padding-left: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.four{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.four::before{
+    content: 'Password cannot be empty';
+    display: var(--errorPassword, none);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: end;
+    top: 52px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 11px;
+    color: hsl(0, 100%, 74%);
+}
+
+.four::after{
+    content: '';
+    display: var(--errorPassword, none);
+    background-image: url(/images/icon-error.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    justify-self: end;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+.password::placeholder{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.356);
+}
+
+.form>button{
+    height: 50px;
+    border: 0px solid rgba(0, 0, 0, 0.247);
+    border-radius: 5px;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 0px 5px 0px hsl(154, 55%, 43%);
+}
+
+.form>button:hover{
+    
+    background-color: hsl(154, 85%, 63%);
+    box-shadow: 0px 3.5px 0px hsl(154, 55%, 43%);
+}
+
+.form>p{
+    color: rgba(0, 0, 0, 0.336);
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 11px;
+    text-align: center;
+}
+
+.form>p>span{
+    color: hsl(0, 100%, 74%);
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 11px;
+}
+
+@media only screen and (min-width:800px) {
+
+    body {
+        display: grid;
+        width: auto;
+        width: auto;
+        justify-items: center;
+        align-items: center;
+        background-image: url(/images/bg-intro-desktop.png);
+        background-repeat: no-repeat;
+        background-color: var(--Red);
+        padding-top: 100px;
+        padding-bottom: 100px ;
+    }
+    
+    .main-container{
+        display: grid;
+        width: 80%;
+        height: max-content;
+        min-width: 300px;
+        max-width: 1000px;
+        background-color: transparent;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        gap: 70px;
+        
+    }
+    
+    .left-side{
+        display: grid;
+        width: auto;
+        height: min-content;
+        grid-template-columns: auto;
+        grid-template-rows: max-content max-content;
+        gap: 25px;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .left-side>h1{
+        font-family: Poppins;
+        font-weight: 700;
+        color: white;
+        word-break: normal;
+        height: 100px;
+        max-width: 500px;
+        min-width: 300px;
+        font-size: 50px;
+        height: max-content;
+        line-height: 60px;
+    }
+    
+    .left-side>p{
+        font-family: Poppins;
+        font-weight: 400;
+        color: white;
+        text-align: left;
+        
+    }
+    
+    .right-side{
+        display: grid;
+        width: auto;
+        height: auto;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        background-color: transparent;
+        gap: 25px;
+    }
+    
+    
+    .try-it-free{
+        display: grid;
+        width: 100%;
+        height: 60px;
+        background-color: var(--Blue);
+        justify-items: center;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 9px 0px rgba(0, 0, 0, 0.13);
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .try-it-free>p{
+        width: auto;
+    }
+    
+    
+ }
